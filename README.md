@@ -1,8 +1,18 @@
-This repo contains code to accompany my paper, 'Construction of a Biomedical Knowledge Graph using Natural Language Processing' that was presented at ICETCS, 2024.     
-This resulted from my work during my internship at HPCC systems.
+# Construction of a Biomedical Knowledge Graph using Natural Language Processing
+ 
+This repository contains code and resources for constructing a **Biomedical Knowledge Graph** (BKG) from scientific literature using Natural Language Processing (NLP). It implements an end-to-end pipeline—from PDF text extraction and preprocessing, through Named Entity Recognition (NER) and co-occurrence analysis, to graph storage and querying in Neo4j. The corresponding paper describes the methodology, experiments, and results in detail.
 
-# Abstract
-Biomedical Named Entity Linking (NEL) plays a crucial role in extracting valuable information from text for downstream tasks in bioinformatics. However, challenges like entity ambiguity and complex relationships hinder accurate entity linking. We demonstrate the effectiveness of BERN2, a novel neural network architecture designed to address these challenges and improve NEL performance, by linking entities to a knowledge graph stored in a Neo4j graph database. This combination allows for efficient exploration of intricate relationships between entities, facilitating advanced biomedical research. Furthermore, we showcase the utility of leveraging node embedding techniques on the knowledge graph for various machine-learning applications in the biomedical domain. Our findings suggest that BERN2, coupled with knowledge graphs and node embeddings, can significantly enhance biomedical information extraction and empower researchers with powerful tools for collaborative healthcare research and accelerated discoveries.
+---
+
+## Features
+
+* **OCR-based PDF extraction** using `pdf2image` and `pytesseract` to convert research articles into raw text.
+* **Text cleaning** with NLTK to remove headers, figure captions, and normalize content.
+* **Biomedical NER** leveraging the BERN2 API for multi-type entity recognition and linking.
+* **Co-occurrence analysis** to identify relationships between entities within a sliding window.
+* **Graph construction** in Neo4j, including nodes for authors, articles, sentences, and entities, and relationships for mentions and co-occurrence.
+* **Graph-powered applications** such as search engine queries, author expertise inspection, and potential integration with machine learning via node embeddings.
+
 
 ---
 
